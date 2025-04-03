@@ -36,7 +36,8 @@ const ContentArea = styled.main`
 `;
 
 const App: React.FC = () => {
-  const { /* theme */ } = useTheme();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { theme } = useTheme();
   const location = useLocation();
   const [showSplash, setShowSplash] = useState(true);
 

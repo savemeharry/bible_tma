@@ -144,6 +144,7 @@ const ReadingPage: React.FC = () => {
     loadBibleText();
     // Scroll to top when chapter changes
     window.scrollTo(0, 0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [book, chapter, verse, bible.currentTranslation]);
   
   // Scroll handling to show/hide action panel

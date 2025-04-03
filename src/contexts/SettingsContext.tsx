@@ -1,5 +1,4 @@
-import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
-import { useTheme } from './ThemeContext';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 // Types
 export interface AppSettings {
