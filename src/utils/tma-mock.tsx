@@ -113,7 +113,7 @@ export const SDKProvider: React.FC<SDKProviderProps> = ({ options, children }) =
             // Создаем базовые методы для мок-объекта WebApp
             showPopup: (params: any) => alert(params.message || "Уведомление"),
             showAlert: (message: string) => alert(message),
-            showConfirm: (message: string) => confirm(message),
+            showConfirm: (message: string) => window.confirm(message),
             ready: () => console.log("TMA ready"),
             close: () => console.log("TMA closed"),
             expand: () => console.log("TMA expanded to fullscreen"),
