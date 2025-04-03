@@ -1,0 +1,130 @@
+/* Base CSS with variables and common styles */
+
+/* --- Variables --- */
+:root {
+  /* Light theme */
+  --bg-main-light: #F0F4F8;
+  --bg-content-light: #FFFFFF;
+  --bg-card-light: #FFFFFF;
+  --text-main-light: #2C3E50;
+  --text-headers-light: #1A365D;
+  --text-secondary-light: #7F8C8D;
+  --accent-color-light: #3498DB;
+  --secondary-accent-light: #27AE60;
+  --link-color-light: #2980B9;
+  --border-color-light: #E2E8F0;
+  --placeholder-color-light: #95A5A6;
+  --shadow-light: 0 4px 10px rgba(0, 0, 0, 0.06);
+
+  /* Dark theme */
+  --bg-main-dark: #1A1D24;
+  --bg-content-dark: #252A34;
+  --bg-card-dark: #2B313B;
+  --text-main-dark: #E0E6ED;
+  --text-headers-dark: #F1F9FF;
+  --text-secondary-dark: #90A4AE;
+  --accent-color-dark: #4DADEB;
+  --secondary-accent-dark: #2ECC71;
+  --link-color-dark: #5DADE2;
+  --border-color-dark: #3E4C5A;
+  --placeholder-color-dark: #718096;
+  --shadow-dark: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+  /* Fonts */
+  --font-text: 'PT Serif', serif;
+  --font-headers: 'Montserrat', sans-serif;
+  --font-interface: 'Inter', sans-serif;
+  --font-noto: 'Noto Serif', serif;
+
+  /* Sizes */
+  --base-font-size: 16px;
+  --base-line-height: 1.75;
+  --header-height: 60px;
+  --footer-height: 65px;
+
+  /* Colors for JS */
+  --accent-color-rgb-light: 52, 152, 219;
+  --accent-color-rgb-dark: 77, 173, 235;
+}
+
+/* --- Base styles --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: var(--base-font-size);
+}
+
+body {
+  font-family: var(--font-interface);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overscroll-behavior: none;
+  line-height: 1.5;
+}
+
+body[data-theme="light"] {
+  --bg-main: var(--bg-main-light);
+  --bg-content: var(--bg-content-light);
+  --bg-card: var(--bg-card-light);
+  --text-main: var(--text-main-light);
+  --text-headers: var(--text-headers-light);
+  --text-secondary: var(--text-secondary-light);
+  --accent-color: var(--accent-color-light);
+  --secondary-accent: var(--secondary-accent-light);
+  --link-color: var(--link-color-light);
+  --border-color: var(--border-color-light);
+  --placeholder-color: var(--placeholder-color-light);
+  --shadow: var(--shadow-light);
+  --accent-color-rgb: var(--accent-color-rgb-light);
+}
+
+body[data-theme="dark"] {
+  --bg-main: var(--bg-main-dark);
+  --bg-content: var(--bg-content-dark);
+  --bg-card: var(--bg-card-dark);
+  --text-main: var(--text-main-dark);
+  --text-headers: var(--text-headers-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --accent-color: var(--accent-color-dark);
+  --secondary-accent: var(--secondary-accent-dark);
+  --link-color: var(--link-color-dark);
+  --border-color: var(--border-color-dark);
+  --placeholder-color: var(--placeholder-color-dark);
+  --shadow: var(--shadow-dark);
+  --accent-color-rgb: var(--accent-color-rgb-dark);
+}
+
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+button {
+  font-family: var(--font-interface);
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-out;
+} 
