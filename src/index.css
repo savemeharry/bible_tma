@@ -9,8 +9,8 @@
   --text-main-light: #121212;
   --text-headers-light: #000000;
   --text-secondary-light: #6E6E6E;
-  --accent-color-light: #00C853; /* Зеленый акцент */
-  --secondary-accent-light: #FF4081; /* Розовый акцент */
+  --accent-color-light: #2196F3; /* Голубой акцент для индикаторов прогресса */
+  --secondary-accent-light: #2196F3; /* Тот же голубой */
   --link-color-light: #000000;
   --border-color-light: #E0E0E0;
   --placeholder-color-light: #9E9E9E;
@@ -23,8 +23,8 @@
   --text-main-dark: #E0E0E0;
   --text-headers-dark: #FFFFFF;
   --text-secondary-dark: #A0A0A0;
-  --accent-color-dark: #69F0AE; /* Светло-зеленый акцент */
-  --secondary-accent-dark: #FF80AB; /* Светло-розовый акцент */
+  --accent-color-dark: #42A5F5; /* Светло-голубой акцент */
+  --secondary-accent-dark: #42A5F5; /* Тот же светло-голубой */
   --link-color-dark: #FFFFFF;
   --border-color-dark: #424242;
   --placeholder-color-dark: #757575;
@@ -43,8 +43,8 @@
   --footer-height: 65px;
 
   /* Colors for JS */
-  --accent-color-rgb-light: 0, 200, 83;
-  --accent-color-rgb-dark: 105, 240, 174;
+  --accent-color-rgb-light: 33, 150, 243;
+  --accent-color-rgb-dark: 66, 165, 245;
 }
 
 /* --- Base styles --- */
