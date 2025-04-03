@@ -45,7 +45,6 @@ interface SettingsProviderProps {
 // Provider component
 export const SettingsProvider: React.FC<SettingsProviderProps> = ({ children }) => {
   const [settings, setSettings] = useState<AppSettings>(defaultSettings);
-  const { toggleTheme } = useTheme();
   
   // Load settings from localStorage on mount
   useEffect(() => {

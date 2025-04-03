@@ -50,14 +50,6 @@ const UserStatus = styled.div`
   color: var(--text-secondary);
 `;
 
-const Header = styled.h1`
-  font-family: var(--font-headers);
-  font-size: 1.5rem;
-  color: var(--text-headers);
-  margin-bottom: 20px;
-  font-weight: 600;
-`;
-
 const TabsContainer = styled.div`
   display: flex;
   margin-bottom: 20px;

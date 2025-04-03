@@ -155,7 +155,7 @@ const HomePage: React.FC = () => {
     };
     
     loadVerseOfTheDay();
-  }, []);
+  }, [bible]);
   
   const handleSearch = () => {
     if (searchQuery.trim()) {

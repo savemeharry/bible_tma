@@ -97,4 +97,5 @@ export const DisplayGate: React.FC<DisplayGateProps> = ({ children }) => {
   return <>{children}</>;
 };
 
-export default { SDKProvider, useSDK, DisplayGate }; 
+const TMAExports = { SDKProvider, useSDK, DisplayGate };
+export default TMAExports; 

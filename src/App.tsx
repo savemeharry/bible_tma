@@ -36,7 +36,7 @@ const ContentArea = styled.main`
 `;
 
 const App: React.FC = () => {
-  const { theme } = useTheme();
+  const { /* theme */ } = useTheme();
   const location = useLocation();
   const [showSplash, setShowSplash] = useState(true);
 

@@ -107,6 +107,7 @@ const ActionButton = styled.button`
 
 const ReadingPage: React.FC = () => {
   const { book, chapter, verse } = useParams<{book?: string, chapter?: string, verse?: string}>();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const navigate = useNavigate();
   const [showActions, setShowActions] = useState(true);
   const [lastScrollTop, setLastScrollTop] = useState(0);

@@ -244,6 +244,7 @@ const Header: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const { theme, toggleTheme } = useTheme();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const sdk = useSDK();
   const bible = useBible();
   const { settings, updateSettings } = useSettings();
@@ -282,30 +283,7 @@ const Header: React.FC = () => {
     setShowTranslationsModal(true);
   };
   
-  const handleNextChapter = () => {
-    const book = bible.currentLocation.book;
-    const chapter = bible.currentLocation.chapter;
-    const bookObj = bible.getBookById(book);
-    
-    if (bookObj) {
-      // If we're at the last chapter of the book
-      if (chapter >= bookObj.chapters) {
-        // Find the next book
-        const allBooks = bible.books;
-        const currentIndex = allBooks.findIndex(b => b.id === book);
-        
-        if (currentIndex < allBooks.length - 1) {
-          // Go to the first chapter of the next book
-          const nextBook = allBooks[currentIndex + 1];
-          navigate(`/read/${nextBook.id}/1`);
-        }
-      } else {
-        // Go to the next chapter of the current book
-        navigate(`/read/${book}/${chapter + 1}`);
-      }
-    }
-  };
-  
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handlePrevChapter = () => {
     const book = bible.currentLocation.book;
     const chapter = bible.currentLocation.chapter;
@@ -326,6 +304,30 @@ const Header: React.FC = () => {
       } else {
         // Go to the previous chapter of the current book
         navigate(`/read/${book}/${chapter - 1}`);
+      }
+    }
+  };
+  
+  const handleNextChapter = () => {
+    const book = bible.currentLocation.book;
+    const chapter = bible.currentLocation.chapter;
+    const bookObj = bible.getBookById(book);
+    
+    if (bookObj) {
+      // If we're at the last chapter of the book
+      if (chapter >= bookObj.chapters) {
+        // Find the next book
+        const allBooks = bible.books;
+        const currentIndex = allBooks.findIndex(b => b.id === book);
+        
+        if (currentIndex < allBooks.length - 1) {
+          // Go to the first chapter of the next book
+          const nextBook = allBooks[currentIndex + 1];
+          navigate(`/read/${nextBook.id}/1`);
+        }
+      } else {
+        // Go to the next chapter of the current book
+        navigate(`/read/${book}/${chapter + 1}`);
       }
     }
   };

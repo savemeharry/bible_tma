@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
-import BibleService, { BibleBook, BibleTranslation, BibleVerse } from '../services/bibleService';
+import BibleService, { BibleBook, BibleTranslation } from '../services/bibleService';
 
 // Types
 interface BibleLocation {
