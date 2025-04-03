@@ -55,7 +55,7 @@ const ProgressBar = styled.div`
   
   div {
     height: 100%;
-    background-color: var(--secondary-accent);
+    background-color: var(--accent-color);
   }
 `;
 

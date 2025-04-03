@@ -99,7 +99,7 @@ const ProgressBar = styled.div`
   
   div {
     height: 100%;
-    background-color: var(--secondary-accent);
+    background-color: var(--accent-color);
   }
 `;
 
@@ -230,22 +230,24 @@ const AccountPage: React.FC = () => {
   
   // Загрузка данных пользователя из Telegram
   useEffect(() => {
-    // Попытка получить данные пользователя через Telegram SDK
     const getUser = async () => {
       try {
-        // Если бы это было реальное приложение, здесь мы бы использовали telegram-web-app.js
-        if (sdk && sdk.tg) {
-          // Здесь можно было бы парсить данные инициализации Mini App
-          // В данном случае используем моки
+        // Используем данные пользователя из SDK
+        if (sdk && sdk.user) {
           setUser({
-            firstName: 'Иван',
-            lastName: 'Иванов',
-            username: 'ivanov',
-            avatarUrl: 'https://avatars.githubusercontent.com/u/9919?s=200&v=4' // пример аватарки
+            firstName: sdk.user.first_name,
+            lastName: sdk.user.last_name,
+            username: sdk.user.username,
+            avatarUrl: sdk.user.photo_url
           });
         }
       } catch (error) {
         console.error('Ошибка получения данных пользователя:', error);
+        // В случае ошибки используем значения по умолчанию
+        setUser({
+          firstName: 'Пользователь',
+          lastName: 'Telegram',
+        });
       }
     };
     

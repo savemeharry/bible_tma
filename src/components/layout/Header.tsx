@@ -73,7 +73,7 @@ const TranslationButton = styled.button`
   transition: background-color 0.2s;
   
   &:hover {
-    background-color: rgba(52, 152, 219, 0.1);
+    background-color: rgba(0, 0, 0, 0.05);
   }
 `;
 
